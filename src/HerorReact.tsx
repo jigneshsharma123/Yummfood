@@ -1,4 +1,6 @@
 import { useState } from "react";
+// import  {useHistory}  from "react-router-dom";
+
 const HeroReact = () => {
   const [title, setTitle] = useState("YummyFood are always here to serve you.");
   const [showMenu, setShowMenu] = useState(false);
@@ -8,6 +10,12 @@ const HeroReact = () => {
     setIsNavOpen(!isNavOpen);
     const closeAfterClick = document.querySelector("#nav-icon4");
     closeAfterClick?.classList?.toggle("open");
+  };
+  // const history = useHistory();
+
+  const redirectToLoginPage = () => {
+    // history.push("./components/ui/SignupFormDemo.tsx");
+    
   };
   return (
     <div className="min-h-screen relative flex flex-col bg-[url('https://www.tailwindtap.com/assets/components/hero/food-delivery/banner.jpg')]  bg-no-repeat w-full bg-cover bg-left-bottom sm:bg-center">
@@ -66,7 +74,10 @@ const HeroReact = () => {
             <div className="capitalize cursor-pointer text-lg font-semibold text-white hover:text-orange-600">
               Pricing
             </div>
-            <button className="bg-transparent border text-lg font-semibold border-orange-600 py-1.5 px-5 rounded-md h-max text-white hover:bg-orange-600">
+            <button
+              className="bg-transparent border text-lg font-semibold border-orange-600 py-1.5 px-5 rounded-md h-max text-white hover:bg-orange-600"
+              onClick={redirectToLoginPage}
+            >
               Login
             </button>
           </div>

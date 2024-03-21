@@ -38,14 +38,12 @@ const Contact = () => {
           </label>
           <textarea
             id="message"
-            rows="3"
             className="w-full p-3 rounded dark:bg-gray-800"
           ></textarea>
         </div>
         <button
           type="submit"
           className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded dark:bg-violet-400 dark:text-gray-900"
-          fdprocessedid="ix0qhr"
         >
           Send Message
         </button>
