@@ -18,9 +18,13 @@ const HeroReact = () => {
     
   };
   return (
+    // Main container div
     <div className="min-h-screen relative flex flex-col bg-[url('https://www.tailwindtap.com/assets/components/hero/food-delivery/banner.jpg')]  bg-no-repeat w-full bg-cover bg-left-bottom sm:bg-center">
+      {/* Background overlay */}
       <div className="bg-black/60 h-full w-full absolute"></div>
+      {/* Top navigation */}
       <div className="flex justify-between sm:justify-end gap-3.5 items-center pt-5 sm:pt-5 z-30">
+        {/* Hamburger menu button */}
         <div className="flex justify-between sm:justify-end sm:gap-5 items-center w-full px-8">
           <button
             className="w-12 h-12 relative focus:outline-none sm:hidden overscroll-none top-2.5"
@@ -29,6 +33,7 @@ const HeroReact = () => {
               setToggle(!toggle);
             }}
           >
+            {/* Hamburger menu icon */}
             <div className="block w-5 absolute left-5 top-1/3 transform -translate-x-1/2 -translate-y-1/2 z-50">
               <span
                 className={`
@@ -47,11 +52,13 @@ const HeroReact = () => {
               ></span>
             </div>
           </button>
+          {/* Mobile navigation menu */}
           <div
             className={`border-[2px] z-30 border-orange-600 bg-[#050C24] rounded-xl absolute top-[70px] left-5 block sm:hidden p-0.5 ${
               toggle ? "visible" : "invisible"
             }`}
           >
+            {/* Mobile navigation menu items */}
             <div className="p-3 rounded-xl min-w-[180px] text-center">
               <div className="text-white z-50 text-2xl font-normal font-hindVadodara leading-6 tracking-[0.01] cursor-pointer hover:text-orange-600">
                 Home
@@ -64,6 +71,7 @@ const HeroReact = () => {
               </div>
             </div>
           </div>
+          {/* Desktop navigation menu */}
           <div className="sm:flex gap-5 items-center hidden">
             <div className="capitalize text-white text-lg font-semibold hover:text-orange-600 cursor-pointer">
               Home
@@ -74,6 +82,7 @@ const HeroReact = () => {
             <div className="capitalize cursor-pointer text-lg font-semibold text-white hover:text-orange-600">
               Pricing
             </div>
+            {/* Login button */}
             <button
               className="bg-transparent border text-lg font-semibold border-orange-600 py-1.5 px-5 rounded-md h-max text-white hover:bg-orange-600"
               onClick={redirectToLoginPage}
@@ -81,6 +90,7 @@ const HeroReact = () => {
               Login
             </button>
           </div>
+          {/* Icon for desktop */}
           <svg
             className="w-10 h-10 hover:text-orange-600 text-white cursor-pointer hidden sm:block"
             xmlns="http://www.w3.org/2000/svg"
@@ -97,10 +107,12 @@ const HeroReact = () => {
               d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
             />
           </svg>
+          {/* Login button for mobile */}
           <button className="block sm:hidden bg-transparent border border-orange-600 py-1.5 px-5 rounded-md h-max text-white hover:bg-orange-600">
             Login
           </button>
         </div>
+        {/* Mobile navigation menu container */}
         <div
           className={`
                   transition-all ease-in-out z-50
@@ -110,6 +122,7 @@ const HeroReact = () => {
                       : "flex flex-col h-screen w-full top-0 left-full fixed bg-[#2D4263]"
                   }`}
         >
+          {/* Close button for mobile navigation menu */}
           <div
             className="flex pt-5 items-center justify-end text-xl font-bold px-[10%] w-full"
             onClick={() => setShowMenu(!showMenu)}
@@ -120,6 +133,7 @@ const HeroReact = () => {
               className="h-7 cursor-pointer"
             />
           </div>
+          {/* Mobile navigation menu items */}
           <div className="flex flex-col w-full items-center justify-center h-screen gap-[30px] sm:gap-[50px] sm:text-lg text-[20px] leading-[29px] font-normal md:gap-[60px]">
             <div className="text-white text-2xl font-normal font-hindVadodara leading-6 tracking-[0.01] cursor-pointer hover:text-orange-600">
               Home
@@ -133,16 +147,22 @@ const HeroReact = () => {
           </div>
         </div>
       </div>
+      {/* Main content */}
       <div className="min-h-[calc(100vh-69px)] sm:min-h-[calc(100vh-63px)] flex items-center justify-center px-1 z-10">
         <div className="flex flex-col gap-2.5 pb-3 sm:min-w-[448px] max-w-md">
+          {/* Main title */}
           <h1 className="text-3xl sm:text-4xl text-orange-600 text-center font-semibold tracking-wider">
             Flavors Of India
           </h1>
+          {/* Subtitle */}
           <h1 className="text-xl sm:text-2xl text-white text-center w-fit mx-auto transition-all ease-in-out duration-500 mt-1">
             {title}
           </h1>
+          {/* Call-to-action section */}
           <div className="flex justify-center mt-2 flex-col gap-5 sm:gap-7 items-center">
+            {/* Icons with tooltips */}
             <div className="flex items-center gap-4 justify-center w-fit">
+              {/* Icon 1 */}
               <div
                 className="rounded-full w-12 h-12 flex items-center justify-center bg-white shadow-md hover:shadow-orange-600 cursor-pointer group pt-2"
                 onMouseEnter={() =>
@@ -152,6 +172,7 @@ const HeroReact = () => {
                   setTitle("We are always here to serve you.")
                 }
               >
+                {/* Icon 1 SVG */}
                 <svg
                   version="1.2"
                   xmlns="http://www.w3.org/2000/svg"
@@ -160,9 +181,10 @@ const HeroReact = () => {
                   height="40"
                 >
                   <path d="m44.3 5.8c0.6 0 1.1 0.4 1.1 1v27.5c0 2.1-0.9 3.9-2.2 5.2-1.4 1.4-2.2 3.4-2.2 5.4v46.5c0 1.6-1.3 2.8-2.9 2.8-1.5 0-2.8-1.2-2.8-2.8v-46.8c0-1.9-0.7-3.6-2-4.9l-0.3-0.2c-1.3-1.3-2.1-3.1-2.1-5.2v-27.5c0-0.6 0.5-1.1 1.1-1.1 0.6 0 1 0.5 1 1.1v17.9c0 0.5 0.5 1 1 1 0.6 0 1-0.5 1-1v-17.9c0-0.6 0.5-1.1 1.1-1.1 0.6 0 1.1 0.5 1.1 1.1v17.9c0 0.5 0.4 1 0.9 1 0.6 0 1-0.5 1-1v-17.9c0-0.6 0.5-1.1 1.1-1.1 0.6 0 1.1 0.5 1.1 1.1v17.9c0 0.5 0.4 1 0.9 1 0.6 0 1-0.5 1-1v-17.9c0-0.6 0.5-1.1 1.1-1.1z" />
-                  <path d="m58.7 27.9c-0.5 7.5 3 14.7 4.3 18.2 0.2 0.7 0.7 1.3 1.4 1.7q0.2 0.1 0.2 0.3l-0.7 43.5c0 1.5 1.2 2.7 2.6 2.7 1.5 0 2.6-1.2 2.6-2.7v-43.3-41.3c0-1.1-1.3-1.7-2.1-0.9-5.6 5.5-7.7 13.9-8.3 21.8z" />
+                  <path d="M58.7 27.9c-0.5 7.5 3 14.7 4.3 18.2 0.2 0.7 0.7 1.3 1.4 1.7q0.2 0.1 0.2 0.3l-0.7 43.5c0 1.5 1.2 2.7 2.6 2.7 1.5 0 2.6-1.2 2.6-2.7v-43.3-41.3c0-1.1-1.3-1.7-2.1-0.9-5.6 5.5-7.7 13.9-8.3 21.8z" />
                 </svg>
               </div>
+              {/* Icon 2 */}
               <div
                 className="rounded-full w-12 h-12 flex items-center justify-center bg-white shadow-md hover:shadow-orange-600 cursor-pointer group"
                 onMouseEnter={() =>
@@ -172,6 +194,7 @@ const HeroReact = () => {
                   setTitle("We are always here to serve you.")
                 }
               >
+                {/* Icon 2 SVG */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="#000000"
@@ -192,6 +215,7 @@ const HeroReact = () => {
                   </g>
                 </svg>
               </div>
+              {/* Icon 3 */}
               <div
                 className="rounded-full w-12 h-12 flex items-center justify-center bg-white shadow-md hover:shadow-orange-600 cursor-pointer group"
                 onMouseEnter={() => setTitle("Order Your Favorite Food")}
@@ -199,6 +223,7 @@ const HeroReact = () => {
                   setTitle("We are always here to serve you.")
                 }
               >
+                {/* Icon 3 SVG */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -209,8 +234,10 @@ const HeroReact = () => {
                 </svg>
               </div>
             </div>
+            {/* Search input */}
             <div className="flex justify-center min-w-[100px] sm:min-w-[360px] !max-w-[200px] sm:max-w-[360px]">
               <div className="flex bg-white py-2.5 pl-2 pr-1 rounded-l-lg items-center gap-1.5 w-full max-w-[280px] sm:max-w-xl">
+                {/* Search icon */}
                 <svg
                   className="text-orange-600 min-w-[20px] min-h-[20px] fill-orange-600"
                   xmlns="http://www.w3.org/2000/svg"
@@ -225,12 +252,14 @@ const HeroReact = () => {
                 >
                   <polygon points="3 11 22 2 13 21 11 13 3 11" />
                 </svg>
+                {/* Search input field */}
                 <input
                   type="text"
                   className="py-1 outline-none max-w-[156px] sm:max-w-none placeholder:text-xs sm:placeholder:text-sm"
                   placeholder="Street Address, City, State"
                 />
               </div>
+              {/* Search button */}
               <button
                 className="bg-orange-600 px-6 py-1 text-base lg:text-lg font-semibold text-white rounded-r-lg shadow-md "
                 type="submit"
